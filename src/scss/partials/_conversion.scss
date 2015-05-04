@@ -1,0 +1,44 @@
+.followMeBar {
+    background: #999;
+    padding: 10px 20px;
+    position: relative;
+    z-index: 1;
+    color: #fff;
+}
+.followMeBar.fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 0;
+}
+.followMeBar.fixed.absolute {
+    position: absolute;
+}
+#scroller {
+    height:80vh;
+    overflow-y: scroll;
+    position: relative;
+    margin-top: 90px;
+    -webkit-overflow-scrolling: touch;
+}
+#scroller > div {
+    padding: 10px 20px;
+    font-size: 2rem;
+}
+#conversion {
+  min-height: 100vh;
+}
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+    #scroller{
+        font-size: 2rem;
+        -webkit-overflow-scrolling: touch;
+    }
+    #scroller > div {
+        font-size: 6rem;
+    }
+}

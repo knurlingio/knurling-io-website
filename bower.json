@@ -1,0 +1,23 @@
+{
+  "name": "knurling.io",
+  "version": "0.0.0",
+  "authors": [
+    "Paul Vilchez <vilchez.paul@gmail.com>"
+  ],
+  "description": "Gripping digital experiences for barbell sports.",
+  "license": "MIT",
+  "homepage": "http://knurling.io",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass-official": "~3.3.4",
+    "fontawesome": "~4.3.0",
+    "bourbon": "~4.2.2",
+    "compass-mixins": "~1.0.2"
+  }
+}

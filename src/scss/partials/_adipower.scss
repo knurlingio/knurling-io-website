@@ -1,0 +1,576 @@
+//colors
+$color_sushi_approx: #87c441;
+$white: #ffffff;
+
+//data-uris
+$data_uri_0: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC";
+$data_uri_1: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC";
+
+.adipower {
+  height: 160px;
+  width: 300px;
+  position: relative;
+  overflow: hidden;
+  background-image: url('http://vikingweightlifting.com/wp-content/uploads/2012/04/adidas-Adipower-Weightlifitng-Shoes.jpg');
+  background-size: 300px 300px;
+  div {
+    position: absolute;
+    background-color: red;
+  }
+  .toe {
+    border-radius: 0 72% 11% 0;
+    width: 289px;
+    height: 57px;
+    right: 5px;
+    bottom: 6px;
+  }
+  .upper {
+    width: 160px;
+    height:60px;
+    top: 58px;
+    left: 93px;
+    transform: rotate(25deg);
+  }
+  .strap-1 {
+    border-top: 5px solid darkred;
+    border-bottom: 5px solid darkred;
+    border-left: 20px solid darkred;
+    width: 35px;
+    height: 35px;
+    left: 121px;
+    top: 44px;
+    border-radius: 5px;
+    transform: rotate(-53deg) skewX(10deg);
+  }
+  .side-detail-1 {
+    border-top: 5px solid darkred;
+    border-bottom: 5px solid darkred;
+    border-right: 10px solid darkred;
+    width: 100px;
+    height: 35px;
+    left: 48px;
+    top: 100px;
+    border-radius: 5px;
+    transform: rotate(-53deg) skewX(10deg);
+  }
+  .side-detail-2 {
+    width: 61px;
+    height: 100px;
+    border: 5px solid darkred;
+    border-radius: 5px 5px 19% 35%;
+    top: 16px;
+    left: 27px;
+    transform: rotate(-70deg);
+  }
+  .side-detail-3 {
+    width: 61px;
+    height: 69px;
+    border: 5px solid red;
+    border-radius: 5px 5px 19% 35%;
+    top: 28px;
+    left: 44px;
+    transform: rotate(-57deg);
+  }
+  .side-detail-4 {
+    width: 71px;
+    height: 50px;
+    top:80px;
+    left:30px;
+  }
+  .side-detail-5 {
+    background: transparent;
+    width: 42px;
+    height: 25px;
+    border-right: 0px solid darkred;
+    border-top: 9px solid darkred;
+    border-radius: 5px 5px 19% 35%;
+    top: 87px;
+    left: -2px;
+    transform: rotate(-85deg);
+  }
+  .side-detail-6 {
+    width: 13px;
+    height: 70px;
+    border-radius: 100% 0 0 100%;
+    top: 62px;
+    left: 4px;
+  }
+  .stripe {
+    background-color: white;
+    transform: rotate(-53deg) skewX(10deg);
+    height: 15px;
+    border: none;
+    &.left {
+      top: 102px;
+      right: 124px;
+      width: 60px;
+    }
+    &.middle {
+      top: 109px;
+      right: 106px;
+      width: 55px;
+    }
+    &.right {
+      top: 116px;
+      right: 88px;
+      width: 50px;
+    }
+  }
+  .eyelet {
+    border-radius: 10px;
+    width: 10px;
+    height: 10px;
+    @include background-image(radial-gradient(7px 7px, black 0%, red 50%, black 100%));
+    &.one {
+      top: 58px;
+      left: 103px;
+    }
+    &.two {
+      top: 46px;
+      left: 116px;
+    }
+    &.three {
+      top: 74px;
+      left: 170px;
+    }
+    &.four {
+      top: 84px;
+      left: 189px;
+    }
+  }
+  .speed-hole {
+    background-color: black;
+    width: 3px;
+    height: 3px;
+    border-radius: 3px;
+    &.heel{
+      &.one {
+        top: 88px;
+        left: 21px;
+      }
+      &.two {
+        top: 95px;
+        left: 19px;
+      }
+      &.three {
+        top: 102px;
+        left: 17px;
+      }
+      &.four {
+        top: 109px;
+        left: 16px;
+      }
+      &.five {
+        top: 92px;
+        left: 25px;
+      }
+      &.six {
+        top: 99px;
+        left: 23px;
+      }
+      &.seven {
+        top: 106px;
+        left: 22px;
+      }
+    }
+    &.midfoot {
+      &.one {
+        top: 86px;
+        left: 113px;
+      }
+      &.two {
+        top: 92px;
+        left: 113px;
+      }
+      &.three {
+        top: 89px;
+        left: 119px;
+      }
+      &.four {
+        top: 95px;
+        left: 118px;
+      }
+      &.five {
+        top: 92px;
+        left: 124px;
+      }
+    }
+    &.strap {
+      &.one {
+        top: 60px;
+        left: 127px;
+      }
+      &.two {
+        top: 66px;
+        left: 128px;
+      }
+      &.three {
+        top: 64px;
+        left: 134px;
+      }
+      &.four {
+        top: 70px;
+        left: 135px;
+      }
+      &.five {
+        top: 68px;
+        left: 141px;
+      }
+    }
+    &.forefoot {
+      transform: skewX(30deg);
+      width: 2px;
+      height: 2px;
+      border-radius: 2px;
+      &.one {
+        top: 105px;
+        left: 229px;
+      }
+      &.two {
+        top: 104px;
+        left: 231px;
+        width: 1px;
+        height: 1px;
+        border-radius: 1px;
+      }
+      &.three {
+        top: 108px;
+        left: 238px;
+      }
+    }
+  }
+  .heel {
+    &.body {
+      width: 31px;
+      height: 44px;
+      transform: rotate(19deg);
+      top: 77px;
+      left: 6px;
+      border-radius: 0 0 11px 20px;
+    }
+  }
+  .pillar {
+    @include background-image(linear-gradient(to right, darkred 0% , red 6%, darkred 100%));
+    bottom: 9px;
+    &.one {
+      height: 6px;
+      width: 6px;
+      left: 147px;
+      border-radius: 3px 3px 0 0;
+    }
+    &.two {
+      height: 8px;
+      width: 6px;
+      left: 130px;
+      border-radius: 3px 3px 0 0;
+    }
+    &.three {
+      height: 10px;
+      width: 8px;
+      left: 111px;
+      border-radius: 3px 3px 0 0;
+    }
+    &.four {
+      height: 13px;
+      width: 9px;
+      left: 92px;
+      border-radius: 3px 3px 0 0;
+    }
+    &.five {
+      height: 17px;
+      width: 10px;
+      left: 69px;
+      border-radius: 3px 3px 0 0;
+    }
+    &.six {
+      height: 18px;
+      width: 11px;
+      left: 44px;
+      border-radius: 3px 3px 0 0;
+    }
+    &.seven {
+      height: 20px;
+      width: 10px;
+      left: 16px;
+      border-radius: 3px 3px 0 0;
+    }
+    &.eight {
+      height: 26px;
+      width: 6px;
+      left: 3px;
+      border-radius: 3px 5px 0 0;
+      transform: rotate(10deg);
+      bottom: 7px;
+    }
+  }
+  .heel-cup {
+    border-radius: 40% 100% 0 0;
+    width: 100px;
+    height: 36px;
+    bottom: 5px;
+    left: 41px;
+  }
+  .heel-cup-2 {
+    border-radius: 0 0 100% 100%;
+    border-bottom: 1px solid darkred;
+    width: 50px;
+    height: 16px;
+    bottom: 21px;
+    left: 6px;
+  }
+  .heel-cup-3 {
+    border-radius: 0 0 100% 35%;
+    border-bottom: 1px solid darkred;
+    width: 85px;
+    height: 16px;
+    bottom: 33px;
+    left: 6px;
+    transform: rotate(5deg);
+  }
+  .side-detail-8 {
+    width: 9px;
+    height: 20px;
+    border-radius: 5px;
+    top: 101px;
+    left: 6px;
+    background-color:darkred;
+  }
+  .heel-cup-triangle {
+    background: transparent;
+    height:0px;
+    width:0px;
+    border-top:28px dashed transparent;
+    border-left:100px solid red;
+    bottom: 10px;
+    left: 98px;
+  }
+  .pillar-8-triangle {
+    background: transparent;
+    height:0px;
+    width:0px;
+    border-top:23px dashed transparent;
+    border-left:40px solid darkred;
+    bottom: 8px;
+    left: 6px;
+    transform: skewx(-10deg);
+  }
+  .heel-triangle {
+    background: transparent;
+    height:0px;
+    width:0px;
+    border-top:21px dashed transparent;
+    border-left:200px solid darkred;
+    bottom: 8px;
+    left: 19px;
+  }
+  .heel-triangle-cup-1 {
+    height: 3px;
+    width: 50px;
+    bottom: 20px;
+    left: 20px;
+    border-radius: 0 0 100% 100%;
+    transform: rotate(5deg);
+  }
+  .heel-triangle-cup-2 {
+    height: 10px;
+    width: 100px;
+    bottom: 20px;
+    left: 21px;
+    border-radius: 0 0 100% 100%;
+  }
+  .midfoot-plate {
+    width: 240px;
+    height: 100px;
+    border-radius: 100% 100% 0 0;
+    border: 1px solid darkred;
+    transform: rotate(12deg);
+    top: 124px;
+    left: -9px;
+  }
+  .forefoot-detail-1 {
+    width: 59px;
+    height: 46px;
+    border-radius: 9% 25% 0 0;
+    border: 1px solid darkred;
+    transform: skewX(-30deg) rotate(15deg);
+    bottom:-7px;
+    left: 194px;
+  }
+  .forefoot-detail-1b {
+    width: 50px;
+    height: 42px;
+    border-radius: 9% 25% 0 0;
+    border: 1px solid darkred;
+    bottom:-7px;
+    left: 212px;
+  }
+  .forefoot-detail-1c {
+    width: 50px;
+    height: 42px;
+    border-radius: 9% 25% 0 0;
+    transform: skewX(-30deg) rotate(15deg);
+    bottom:-5px;
+    left: 203px;
+  }
+  .forefoot-detail-2 {
+    width: 50px;
+    height: 40px;
+    border-radius: 9% 15% 0 25%;
+    border: 1px solid darkred;
+    transform: skewX(-30deg) rotate(15deg);
+    bottom:-6px;
+    left: 196px;
+  }
+  .forefoot-detail-2b {
+    width: 41px;
+    height: 36px;
+    border-radius: 9% 15% 0 25%;
+    border: 1px solid darkred;
+    bottom:-7px;
+    left: 215px;
+  }
+  .forefoot-detail-2c {
+    width: 42px;
+    height: 34px;
+    border-radius: 9% 15% 0 25%;
+    transform: skewX(-30deg) rotate(15deg);
+    bottom:-2px;
+    left: 205px;
+  }
+  .forefoot-detail {
+      display:none;
+      background: transparent;
+      height: 0;
+      transform: skewy(20deg);
+      &.one {
+        width: 59px;
+        border-bottom: 38px solid darkred;
+        border-left: 19px solid transparent;
+        border-right: 10px solid transparent;
+        bottom: 0px;
+        left: 194px;
+      }
+      &.two {
+        width: 57px;
+        border-bottom: 37px solid red;
+        border-left: 19px solid transparent;
+        border-right: 10px solid transparent;
+        bottom: 0px;
+        left: 195px;
+      }
+      &.three {
+        width: 55px;
+        border-bottom: 35px solid darkred;
+        border-left: 19px solid transparent;
+        border-right: 10px solid transparent;
+        bottom: 0px;
+        left: 196px;
+      }
+      &.four {
+        width: 53px;
+        border-bottom: 34px solid red;
+        border-left: 19px solid transparent;
+        border-right: 10px solid transparent;
+        bottom: 0px;
+        left: 197px;
+      }
+  }
+  .sole {
+    background-color: black;
+    width: 294px;
+    height: 6px;
+    bottom: 4px;
+    left: 1px;
+    border-radius: 3px;
+  }
+  .sole-lip {
+    background-color: black;
+    width: 6px;
+    height: 12px;
+    border-radius: 3px;
+    right: 3px;
+    bottom: 4px;
+    transform: rotate(10deg);
+  }
+  .floor {
+    width: 300px;
+    background: white;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+  }
+  .ceiling {
+    background-color: white;
+    width: 300px;
+    height: 60px;
+    border-radius: 0 0 100% 100%;
+    transform: rotate(35deg);
+    left: 34px;
+    top: 9px;
+  }
+  .ceiling-2 {
+    background-color:white;
+    width:40px;
+    height:75px;
+    transform: rotate(20deg) skewX(-33deg);
+    left: 78px;
+    top: 0px;
+    border-radius: 5px;
+  }
+  .ceiling-3 {
+    background-color: white;
+    width: 15px;
+    height: 100px;
+    border-radius: 0 100% 100% 0;
+    left: 03px;
+    top: 0;
+    transform: rotate(10deg);
+  }
+  .ceiling-4 {
+    background-color: white;
+    width: 50px;
+    height: 57px;
+    border-radius: 0 0 100% 100%;
+    transform: rotate(10deg);
+    top:20px;
+    left:42px;
+  }
+  .ceiling-5 {
+    background-color: white;
+    width: 50px;
+    height: 57px;
+    top:3px;
+    left:14px;
+  }
+  .ceiling-6 {
+    background-color: white;
+    width:20px;
+    height: 10px;
+    top: 32px;
+    left: 118px;
+  }
+  .heel-tab {
+    width: 28px;
+    height: 35px;
+    border-radius: 28px;
+    top: 47px;
+    left: 16px;
+
+  }
+  .heel-tab-2 {
+    width: 20px;
+    height: 36px;
+    border-radius: 25px;
+    top: 43px;
+    left: 14px;
+    transform: rotate(44deg);
+
+  }
+  .floor-2 {
+    bottom: 0;
+    height: 28px;
+    background-color: white;
+    width: 6px;
+  }
+}
+

@@ -1,0 +1,67 @@
+.event-card {
+  background: white;
+  color: black;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1px 0;
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.12);
+    &>div {
+        margin: 20px;
+        padding: 15px;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.16);
+
+        &>table {
+          width: 100%;
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.19);
+          td, th {
+              font-family: 'Inconsolata',;
+              text-align: right;
+              &:first-child {
+                  text-align: left;
+              }
+          }
+        }
+    }
+    h2, h4 {
+        font-family: 'Lora', sans-serif;
+    }
+    h2 {
+        font-weight: 700;
+        font-size: 2em;
+    }
+    .powered-by {
+        font-family: 'Montserrat', sans-serif;
+        padding: 0px 10px;
+        margin: 10px 0;
+        width: 100%;
+        text-align: right;
+        color: rgba(0,0,0,0.3);
+        display: inline-block;
+        .fa-custom-knurling {
+            display: inline-block;
+            &:before {
+                content: "";
+                background-image: url(http://knurling.io/img/knurling-grey30.svg);
+                background-size: 20px 12px;
+                width: 18px;
+                height: 12px;
+                display: block;
+            }
+        }
+    }
+}
+@media(max-width:767px){
+#api {
+  #chart-mobile .event-card {
+      max-width: 300px;
+  }
+  #chart-full{
+      display:none;
+  }
+}
+}
+@media(min-width:768px){
+    #chart-mobile {
+        display: none;
+    }
+}

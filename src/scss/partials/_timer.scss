@@ -1,0 +1,28 @@
+#timer {
+    min-height: 100vh;
+    #time {
+        font-size: 20rem;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        font-weight: 500;
+        line-height: 1.1;
+    }
+}
+
+@media(max-width:767px){
+#timer {
+    #time {
+        font-size: 10rem;
+    }
+    .full-name {
+        display:none;
+    }
+    .banner-social-buttons {
+        text-align: center;
+        li {
+            float: left;
+            margin: 0px 10px;
+        }
+    }
+}
+}

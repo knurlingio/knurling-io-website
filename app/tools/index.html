@@ -1,0 +1,230 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Knurling.IO - Digital meets Barbell Sports</title>
+
+    <link rel="icon" type="image/png" href="../assets/img/knurling32.png">
+    <!-- Bootstrap Core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/css/style.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="../assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="/">
+                    <i class="fa fa-custom-knurling"></i>  <span class="light">Knurling</span>.IO
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#timer">Timer</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#bar-calculator">Loader</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Intro Header -->
+    <header class="intro">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h1 class="brand-heading">Tools for training and competition.</h1>
+                        <p class="intro-text"></p>
+                        <a href="#about" class="btn btn-circle page-scroll">
+                            <i class="fa fa-angle-double-down animated"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+        <!-- Timer Section -->
+<section id="timer" class="container content-section">
+<h2>Time:</h2>
+<div class="row text-center">
+            <div class="col-lg-8 col-lg-offset-2">
+                <ul class="list-inline banner-social-buttons">
+                    <li>
+                        <a id="one" onclick="KIOTimer.startTimer(60,document.querySelector('#time'))" class="btn btn-default btn-lg"><i class="fa fa-clock-o fa-fw"></i> 1<span class="full-name">:00</span></a>
+                    </li>
+                    <li>
+                        <a onclick="KIOTimer.startTimer(120,document.querySelector('#time'))" class="btn btn-default btn-lg"><i class="fa fa-clock-o fa-fw"></i> 2<span class="full-name">:00</span></a>
+                    </li>
+                    <li>
+                        <a onclick="KIOTimer.startTimer(300,document.querySelector('#time'))" class="btn btn-default btn-lg"><i class="fa fa-clock-o fa-fw"></i> 5<span class="full-name">:00</span></a>
+                    </li>
+                    <li>
+                        <a onclick="KIOTimer.startTimer(600,document.querySelector('#time'))" class="btn btn-default btn-lg"><i class="fa fa-clock-o fa-fw"></i> 10<span class="full-name">:00</span></a>
+                    </li>
+                    <li>
+                        <a onclick="KIOTimer.startTimer(900,document.querySelector('#time'))" class="btn btn-default btn-lg"><i class="fa fa-clock-o fa-fw"></i> 15<span class="full-name">:00</span></a>
+                    </li>
+                </ul>
+                <span id="time">01:00</span>
+                <ul class="list-inline banner-social-buttons">
+                    <li>
+                        <a id="start-button" onclick="KIOTimer.startTimer(KIOTimer.remaining, document.querySelector('#time'))" class="btn btn-default btn-lg"><i class="fa fa-play fa-fw"></i> <span class="full-name">Start</span></a>
+                    </li>
+                    <li>
+                        <a id="stop-button" onclick="KIOTimer.stopTimer()" class="btn btn-default btn-lg"><i class="fa fa-stop fa-fw"></i> <span class="full-name">Stop</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+</section>
+<!-- End Timer Section -->
+
+<!-- Bar Loader Section -->
+<section id="bar-calculator" class="container content-section">
+<h2>Load Bar:</h2>
+  <div class="input">
+            <label class="" for="">
+                <span class="">Choose bar:</span>
+            </label>
+    <div class="segmented-control" style="width: 100%; color: #D2B887">
+        <input onclick="KIOBarLoader.update()" type="radio" name="sc-1-1" data-value="20" id="sc-1-1-1" checked>
+        <input onclick="KIOBarLoader.update()" type="radio" name="sc-1-1" data-value="15" id="sc-1-1-2">
+
+        <label for="sc-1-1-1" data-value="20kg">20kg</label>
+        <label for="sc-1-1-2" data-value="15kg">15kg</label>
+    </div>
+    <section class="content bgcolor-3">
+        <span class="input">
+            <label class="" for="input-32">
+                <span class="">Enter Total Weight (kg)</span>
+            </label>
+            <input onchange="KIOBarLoader.update()" class="" type="number" id="input-32" value="190">
+        </span>
+        <a id="calculate-button" onclick="KIOBarLoader.update()" class="btn btn-default btn-lg"><i class="fa fa-calculator fa-fw"></i> <span class="network-name">Calculate</span></a>
+    </section>
+  </div>
+<div class="wrapper">
+  <div class="bar_0">
+    <div class="discs">
+      <div class="disc_0_5"></div>
+      <div class="disc_1"></div>
+      <div class="disc_1_5"></div>
+      <div class="disc_2"></div>
+      <div class="collar"></div>
+      <div class="disc_2_5"></div>
+      <div class="disc_5"></div>
+      <div class="disc_10"></div>
+      <div class="disc_15"></div>
+      <div class="disc_20"></div>
+      <div class="disc_25"></div>
+    </div>
+    <div class="structure">
+      <div class="collar"></div>
+      <div class="base">
+        <div class="stripe bar_20"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="text">
+</div>
+</section>
+
+<!-- End Bar Loader Section -->
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Contact Knurling.IO</h2>
+                <p>Feel free to email us to provide some feedback, or to just say hello!</p>
+                <p><a href="mailto:knurlingio@gmail.com">knurlingio@gmail.com</a>
+                </p>
+                <ul class="list-inline banner-social-buttons">
+                    <li>
+                        <a href="https://twitter.com/knurlingio" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
+                    </li>
+                    <li>
+                        <a href="https://instagram.com/knurlingio" class="btn btn-default btn-lg"><i class="fa fa-instagram fa-fw"></i> <span class="network-name">Instagram</span></a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/knurlingio" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>Copyright &copy; Knurling.IO 2014</p>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="https://fb.me/react-0.13.2.js"></script>
+    <script src="https://fb.me/JSXTransformer-0.13.2.js"></script>
+    <script src="../assets/js/scripts.min.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-62363310-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+</body>
+
+</html>
+

@@ -1,0 +1,276 @@
+$initial: 60px;
+$add: 30px;
+$height: 30px;
+#bar-calculator {
+    min-height: 100vh;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    .text {
+        margin:40px;
+    }
+    .input {
+        input {
+            height: 4rem;
+            font-size: 2rem;
+            max-width: 72px;
+        }
+    }
+}
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  & > div {
+    width: $initial + $add*7;
+    height: $height*8;
+    
+    & > .discs {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      height: $height*7;
+      & > div {
+        //height: $height;
+        box-shadow: 0 -2px 0 0 darken(black, 10) inset;
+        border-radius: 6px;
+        z-index: 2;
+        transition: .3s ease;
+      }
+    }
+    
+    & .structure {
+      position: relative;
+      bottom: $height*8;
+      width: $initial + $add*7;
+      & .collar {
+        position: relative;
+        width: 25px;
+        height: $height*8;
+        background-color: silver;
+        left: calc(50% - 12px);
+      }
+      & .base {
+        width: $initial;
+        height: $height;
+        background-color: silver;
+        border-radius: 0;
+        left: calc(50% - 30px);
+        position: relative;
+      }
+    }
+  }
+}
+
+.disc_25 {
+  width: $initial + $add*6;
+  height: $height * 1.5;
+  background-color: red;
+}
+.disc_20 {
+  width: $initial + $add*6;
+  height: $height * 1.25;
+  background-color: blue;
+}
+.disc_15 {
+  width: $initial + $add*6;
+  height: $height * 1;
+  background-color: yellow;
+}
+.disc_10 {
+  width: $initial + $add*6;
+  height: $height * 0.75;
+  background-color: green;
+}
+.disc_5 {
+  width: $initial + $add*4;
+  height: $height * 0.5;
+  background-color: white;
+}
+.disc_2_5 {
+  width: $initial + $add*3;
+  height: $height * 0.45;
+  background-color: red;
+}
+.disc_2 {
+  width: $initial + $add*2;
+  height: $height * 0.4;
+  background-color: blue;
+}
+.disc_1_5 {
+  width: $initial + $add;
+  height: $height * 0.35;
+  background-color: yellow;
+}
+.disc_1 {
+  width: $initial;
+  height: $height * 0.3;
+  background-color: green;
+}
+.disc_0_5 {
+  width: $initial - 10px;
+  height: $height * 0.2;
+  background-color: white;
+}
+.collar {
+  width: $initial;
+  height: $height * 1.5;
+  background-color: grey;
+}
+.stripe {
+  position: relative;
+  top: 11px;
+  width: $initial;
+  height: $height * .2;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  &.bar_5{
+    background-color: white;
+  }
+  &.bar_10{
+    background-color: green;
+  }
+  &.bar_15{
+    background-color: yellow;
+  }
+  &.bar_20{
+    background-color: blue;
+  }
+}
+.bar_0 {
+  -ms-transform: rotate(90deg); /* IE 9 */
+  -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+  transform: rotate(90deg);
+}
+
+
+
+
+
+$control-count: 6;
+$transition-timing-function: cubic-bezier(0.445, 0.050, 0.550, 0.950);
+$transition-duration: .7s;
+$color-active: white;
+
+.segmented-control {
+  position: relative; 
+  display: inline-block;
+  border: 1px solid currentColor;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+  overflow: hidden;
+
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+
+  > input {
+    position: absolute;
+    left: -10000px;
+    opacity: 0;
+
+    &[type='checkbox'] ~ label {
+
+      &:before {
+        opacity: 0;
+      }
+    }
+
+    @for $i from 1 through $control-count {
+      &:disabled:nth-child(#{$i}) ~ label:nth-of-type(#{$i}) {
+        opacity: 0.3;
+        cursor: not-allowed;
+      }
+
+      &:nth-child(#{$i}):checked {
+        ~ label:nth-of-type(#{$i}) {
+          &:after, &:before { 
+            opacity: 1; 
+          }
+        }
+
+        @for $j from $i through $control-count {
+          ~ label:first-of-type:nth-last-of-type(#{$j}) {
+            &:after, &:before, & ~ label:after, & ~ label:before { 
+              left: percentage((($i - 1) / 10) / ($j / 10)); 
+            }
+          }
+        }
+      }
+    }
+  }
+
+  > label {
+    display: inline-block;
+    padding: 0 .71em;
+    cursor: pointer;
+    float: left;
+    line-height: 3em;
+    font-style: inherit;
+    font-weight: inherit;
+    text-decoration: inherit;
+
+    &:before, &:after {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+
+    &:after {
+      color: $color-active;
+      content: attr(data-value);
+      text-align: center;
+      padding: inherit;
+      z-index: 10;
+      font-style: inherit;
+      text-decoration: inherit;
+      font-weight: inherit;
+      opacity: 0;
+
+    }
+
+    &:after, & {
+      text-align: center;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+
+    }
+
+    &:before {
+      content: '';
+      color: inherit;
+      background: currentColor;
+
+    }
+
+    @for $i from 1 through $control-count {
+      &:first-of-type:nth-last-of-type(#{$i}) {
+        &, & ~ label {
+          &, &:after, &:before {
+            width: percentage(1/$i);
+          }
+        }
+      }
+    }
+  }
+
+  &.italic, .italic             { font-style: italic; }
+  &.bold, .bold                 { font-weight: bold; }
+  &.underline, .underline       { text-decoration: underline; }
+  &.line-through, .line-through { text-decoration: line-through; }
+}
+
+@media(max-width:767px){
+  #calculate-button{
+      .network-name{
+          display:none;
+      }
+  }
+  .wrapper {
+      max-width: 767px;
+  }
+}
