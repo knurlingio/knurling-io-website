@@ -1,18 +1,10 @@
-//colors
-$color_sushi_approx: #87c441;
-$white: #ffffff;
-
-//data-uris
-$data_uri_0: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC";
-$data_uri_1: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC";
-
 .adipower {
   height: 160px;
   width: 300px;
   position: relative;
   overflow: hidden;
-  background-image: url('http://vikingweightlifting.com/wp-content/uploads/2012/04/adidas-Adipower-Weightlifitng-Shoes.jpg');
-  background-size: 300px 300px;
+  margin: 0 auto;
+  background-color: black;
   div {
     position: absolute;
     background-color: red;
@@ -476,7 +468,7 @@ $data_uri_1: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1Pe
       }
   }
   .sole {
-    background-color: black;
+    background-color: #333;
     width: 294px;
     height: 6px;
     bottom: 4px;
@@ -484,7 +476,7 @@ $data_uri_1: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1Pe
     border-radius: 3px;
   }
   .sole-lip {
-    background-color: black;
+    background-color: #333;
     width: 6px;
     height: 12px;
     border-radius: 3px;
@@ -494,13 +486,13 @@ $data_uri_1: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1Pe
   }
   .floor {
     width: 300px;
-    background: white;
+    background: black;
     bottom: 0;
     left: 0;
     height: 4px;
   }
   .ceiling {
-    background-color: white;
+    background-color: black;
     width: 300px;
     height: 60px;
     border-radius: 0 0 100% 100%;
@@ -509,7 +501,7 @@ $data_uri_1: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1Pe
     top: 9px;
   }
   .ceiling-2 {
-    background-color:white;
+    background-color:black;
     width:40px;
     height:75px;
     transform: rotate(20deg) skewX(-33deg);
@@ -518,7 +510,7 @@ $data_uri_1: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1Pe
     border-radius: 5px;
   }
   .ceiling-3 {
-    background-color: white;
+    background-color: black;
     width: 15px;
     height: 100px;
     border-radius: 0 100% 100% 0;
@@ -527,7 +519,7 @@ $data_uri_1: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1Pe
     transform: rotate(10deg);
   }
   .ceiling-4 {
-    background-color: white;
+    background-color: black;
     width: 50px;
     height: 57px;
     border-radius: 0 0 100% 100%;
@@ -536,14 +528,14 @@ $data_uri_1: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1Pe
     left:42px;
   }
   .ceiling-5 {
-    background-color: white;
+    background-color: black;
     width: 50px;
     height: 57px;
     top:3px;
     left:14px;
   }
   .ceiling-6 {
-    background-color: white;
+    background-color: black;
     width:20px;
     height: 10px;
     top: 32px;
@@ -569,7 +561,7 @@ $data_uri_1: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1Pe
   .floor-2 {
     bottom: 0;
     height: 28px;
-    background-color: white;
+    background-color: black;
     width: 6px;
   }
 }

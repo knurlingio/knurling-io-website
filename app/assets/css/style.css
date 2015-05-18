@@ -542,7 +542,8 @@ td, th {
   #bar-calculator .input input {
     height: 4rem;
     font-size: 2rem;
-    max-width: 72px; }
+    max-width: 72px;
+    background: black; }
 
 .wrapper {
   display: -webkit-flex;
@@ -862,7 +863,7 @@ td, th {
       display: inline-block; }
       .event-card .powered-by .fa-custom-knurling:before {
         content: "";
-        background-image: url(http://knurling.io/img/knurling-grey30.svg);
+        background-image: url(../img/knurling-grey30.svg);
         background-size: 20px 12px;
         width: 18px;
         height: 12px;
@@ -883,8 +884,8 @@ td, th {
   width: 300px;
   position: relative;
   overflow: hidden;
-  background-image: url('http://vikingweightlifting.com/wp-content/uploads/2012/04/adidas-Adipower-Weightlifitng-Shoes.jpg');
-  background-size: 300px 300px; }
+  margin: 0 auto;
+  background-color: black; }
   .adipower div {
     position: absolute;
     background-color: red; }
@@ -1314,14 +1315,14 @@ td, th {
       bottom: 0px;
       left: 197px; }
   .adipower .sole {
-    background-color: black;
+    background-color: #333;
     width: 294px;
     height: 6px;
     bottom: 4px;
     left: 1px;
     border-radius: 3px; }
   .adipower .sole-lip {
-    background-color: black;
+    background-color: #333;
     width: 6px;
     height: 12px;
     border-radius: 3px;
@@ -1332,12 +1333,12 @@ td, th {
             transform: rotate(10deg); }
   .adipower .floor {
     width: 300px;
-    background: white;
+    background: black;
     bottom: 0;
     left: 0;
     height: 4px; }
   .adipower .ceiling {
-    background-color: white;
+    background-color: black;
     width: 300px;
     height: 60px;
     border-radius: 0 0 100% 100%;
@@ -1347,7 +1348,7 @@ td, th {
     left: 34px;
     top: 9px; }
   .adipower .ceiling-2 {
-    background-color: white;
+    background-color: black;
     width: 40px;
     height: 75px;
     -webkit-transform: rotate(20deg) skewX(-33deg);
@@ -1357,7 +1358,7 @@ td, th {
     top: 0px;
     border-radius: 5px; }
   .adipower .ceiling-3 {
-    background-color: white;
+    background-color: black;
     width: 15px;
     height: 100px;
     border-radius: 0 100% 100% 0;
@@ -1367,7 +1368,7 @@ td, th {
         -ms-transform: rotate(10deg);
             transform: rotate(10deg); }
   .adipower .ceiling-4 {
-    background-color: white;
+    background-color: black;
     width: 50px;
     height: 57px;
     border-radius: 0 0 100% 100%;
@@ -1377,13 +1378,13 @@ td, th {
     top: 20px;
     left: 42px; }
   .adipower .ceiling-5 {
-    background-color: white;
+    background-color: black;
     width: 50px;
     height: 57px;
     top: 3px;
     left: 14px; }
   .adipower .ceiling-6 {
-    background-color: white;
+    background-color: black;
     width: 20px;
     height: 10px;
     top: 32px;
@@ -1406,7 +1407,7 @@ td, th {
   .adipower .floor-2 {
     bottom: 0;
     height: 28px;
-    background-color: white;
+    background-color: black;
     width: 6px; }
 
 .btn.btn-circle {
@@ -1414,10 +1415,10 @@ td, th {
   height: 70px;
   margin-top: 15px;
   padding: 7px 16px;
-  border: 2px solid #ffffff;
+  border: 2px solid #fff;
   border-radius: 35px;
   font-size: 40px;
-  color: #ffffff;
+  color: #fff;
   background: 0 0;
   transition: background .3s ease-in-out; }
 
@@ -1431,6 +1432,13 @@ td, th {
   border: 1px solid #d2b887;
   color: #d2b887;
   background-color: transparent; }
+
+ul.experiments {
+  list-style: none;
+  padding: 20px; }
+  ul.experiments li {
+    padding: 10px;
+    font-size: 1.6rem; }
 
 p {
   margin: 0 0 25px;
@@ -1515,7 +1523,7 @@ a {
   height: 100vh;
   padding: 100px 0;
   text-align: center;
-  color: #ffffff;
+  color: #fff;
   background: url(../img/knurling.jpg) repeat top center scroll;
   background-color: #000; }
   .intro .intro-body {
@@ -1537,7 +1545,7 @@ a {
 .api-section {
   width: 100%;
   padding: 50px 0;
-  color: #ffffff;
+  color: #fff;
   background-color: #000;
   background-size: cover; }
   .api-section .docs {
